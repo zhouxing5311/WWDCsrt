@@ -85,7 +85,8 @@ struct Subtitle: Comparable {
         if self.wwdcYear == 2020 {
             return URL(string: self.videoURLPrefix + "cc/en/en.m3u8")!
         }
-		return URL(string:self.videoURLPrefix + "subtitles/eng/prog_index.m3u8")!
+        
+        return URL(string:self.videoURLPrefix + "subtitles/" + model.languageStr + "/prog_index.m3u8")!
 	}
 	
 	/// The id used to save subtitle in the model
@@ -166,7 +167,7 @@ struct Subtitle: Comparable {
         if self.wwdcYear == 2020 {
             return URL(string: self.videoURLPrefix + "cc/en/" + webvtt.name)!
         }
-        return URL(string: self.videoURLPrefix + "subtitles/eng/" + webvtt.name)!
+        return URL(string: self.videoURLPrefix + "subtitles/" + model.languageStr + "/" + webvtt.name)!
 	}
 	
 	/**

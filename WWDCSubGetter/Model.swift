@@ -68,6 +68,8 @@ struct Model {
         return self.videosSub.isEmpty
     }
     
+    var languageStr = "zho"
+    
     /**
          This method create a subtitle object with given `videoURL`
          and if it wasn't nil, adds it to the model.

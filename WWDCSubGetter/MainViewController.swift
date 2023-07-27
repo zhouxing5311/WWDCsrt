@@ -216,6 +216,12 @@ final class MainViewController: NSViewController, TextFileViewDelegate, NSTextFi
 
     }
     
+    // MARK: - Language change methods
+    @IBAction func languageClicked(_ sender: NSPopUpButton) {
+        model.languageStr = sender.selectedItem!.title
+    }
+    
+    
     // MARK: Radio buttons methods
     
     @IBAction func singleSessionSelected(_ sender: NSButton) {
